@@ -1,0 +1,111 @@
+l>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تهنئة لغزلان</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Tahoma', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('https://media.tenor.com/yO21gfpez0kAAAA1/sharkcat-memecoin.webp') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* تغطية شفافة لسهولة قراءة النص */
+      padding: 40px;
+      border-radius: 20px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1, p {
+      animation: slideIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      animation-delay: 0.5s;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      animation-delay: 1s;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease 1.5s forwards;
+      opacity: 0;
+    }
+
+    button:hover {
+      background-color: #f50057;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #fffde7;
+      animation: fadeIn 2s ease 2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1> تهانيا لكي يا اختي 😊🤍!</h1>
+    <p>21 سنة من التفوق و الجمال 💟</p>
+    <button onclick="showMessage()">قبول التهنئة</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById("message");
+      msg.style.opacity = "1";
+      msg.innerText = "شكراً لك! نتمنى لكِ سنة مليئة بالسعادة والنجاح!";
+    }
+  </script>
+</body>
+</html>
